@@ -23,7 +23,6 @@ import {
   IoLeaf,
   IoBarbell,
   IoCheckmarkCircle,
-  IoCloseCircle,
 } from "react-icons/io5";
 import { FaFire, FaBolt, FaMedal } from "react-icons/fa";
 import { BiDumbbell } from "react-icons/bi";
@@ -369,9 +368,11 @@ export default function WhatTheWhey() {
   });
   const [activity, setActivity] = useState(() => {
     const saved = localStorage.getItem("wtw_activity");
-    return saved || "moderate";
+    const validActivity = ACTIVITY.find((a) => a.key === saved);
+    return validActivity ? saved : "moderate";
   });
   const [filter, setFilter] = useState("all");
+  const [activityKey, setActivityKey] = useState(0);
 
   
   useEffect(() => {
@@ -637,7 +638,10 @@ export default function WhatTheWhey() {
                   return (
                     <motion.button
                       key={a.key}
-                      onClick={() => setActivity(a.key)}
+                      onClick={() => {
+                        setActivity(a.key);
+                        setActivityKey(prev => prev + 1);
+                      }}
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
                       aria-pressed={isSelected}
