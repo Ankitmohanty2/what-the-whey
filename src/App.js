@@ -24,7 +24,7 @@ import {
   IoBarbell,
   IoCheckmarkCircle,
 } from "react-icons/io5";
-import { FaFire, FaBolt, FaMedal } from "react-icons/fa";
+import { FaFire, FaBolt, FaMedal, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import { BiDumbbell } from "react-icons/bi";
 
 
@@ -401,9 +401,10 @@ export default function WhatTheWhey() {
         color: C.text,
       }}
     >
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
       <style>{`
-        @import url('https:
-        
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         input[type="number"]::-webkit-inner-spin-button,
@@ -1014,37 +1015,75 @@ export default function WhatTheWhey() {
                 marginBottom: 16,
               }}
             >
-              {[
-                { icon: "github", label: "GitHub" },
-                { icon: "twitter", label: "Twitter" },
-                { icon: "instagram", label: "Instagram" },
-              ].map((social) => (
-                <motion.a
-                  key={social.icon}
-                  href="#"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={social.label}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 42,
-                    height: 42,
-                    borderRadius: 14,
-                    background: C.card,
-                    border: `1px solid ${C.cardBorder}`,
-                    color: C.brown,
-                    textDecoration: "none",
-                    fontSize: 18,
-                    boxShadow: C.shadow,
-                  }}
-                >
-                  {social.icon === "github" && " "}
-                  {social.icon === "twitter" && " "}
-                  {social.icon === "instagram" && " "}
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://github.com/Ankitmohanty2/what-the-whey"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="GitHub"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 42,
+                  height: 42,
+                  borderRadius: 14,
+                  background: C.card,
+                  border: `1px solid ${C.cardBorder}`,
+                  color: C.brown,
+                  textDecoration: "none",
+                  boxShadow: C.shadow,
+                }}
+              >
+                <FaGithub size={20} />
+              </motion.a>
+              <motion.a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Twitter"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 42,
+                  height: 42,
+                  borderRadius: 14,
+                  background: C.card,
+                  border: `1px solid ${C.cardBorder}`,
+                  color: C.brown,
+                  textDecoration: "none",
+                  boxShadow: C.shadow,
+                }}
+              >
+                <FaTwitter size={20} />
+              </motion.a>
+              <motion.a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Instagram"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 42,
+                  height: 42,
+                  borderRadius: 14,
+                  background: C.card,
+                  border: `1px solid ${C.cardBorder}`,
+                  color: C.brown,
+                  textDecoration: "none",
+                  boxShadow: C.shadow,
+                }}
+              >
+                <FaInstagram size={20} />
+              </motion.a>
             </div>
             <div
               style={{
