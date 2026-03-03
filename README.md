@@ -1,5 +1,6 @@
 # What The Whey 🏋️‍♂️
 
+
 A beautiful, responsive protein calculator web app that helps you plan your daily protein intake based on your body weight and activity level.
 
 ![What The Whey](https://img.shields.io/badge/version-1.0.0-orange) ![React](https://img.shields.io/badge/React-19.x-blue) ![License](https://img.shields.io/badge/license-MIT-green)
